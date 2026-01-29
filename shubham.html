@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doraemon Animation</title>
+
+    <style>
+        body {
+            background: #cceeff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main body */
+        .doraemon {
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        /* Head */
+        .head {
+            width: 200px;
+            height: 200px;
+            background: #1e90ff;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        /* Face */
+        .face {
+            width: 160px;
+            height: 140px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+        }
+
+        /* Eyes */
+        .eye {
+            width: 35px;
+            height: 45px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+            border: 2px solid #000;
+        }
+
+        .eye.left {
+            left: 60px;
+        }
+
+        .eye.right {
+            right: 60px;
+        }
+
+        .pupil {
+            width: 10px;
+            height: 15px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 5px;
+            left: 12px;
+            animation: look 2s infinite;
+        }
+
+        /* Nose */
+        .nose {
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 80px;
+            left: 90px;
+        }
+
+        /* Mouth */
+        .mouth {
+            width: 80px;
+            height: 40px;
+            border-bottom: 3px solid black;
+            border-radius: 0 0 80px 80px;
+            position: absolute;
+            top: 105px;
+            left: 60px;
+        }
+
+        /* Animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes look {
+
+            0%,
+            100% {
+                left: 12px;
+            }
+
+            50% {
+                left: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="doraemon">
+        <div class="head">
+            <div class="face"></div>
+
+            <div class="eye left">
+                <div class="pupil"></div>
+            </div>
+
+            <div class="eye right">
+                <div class="pupil"></div>
+            </div>
+
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
